@@ -103,7 +103,18 @@ export default {
           path: '/interview',
           name: 'INTERVIEW',
           icon: 'eye',
-          component: './interview/Interview',
+          routes: [
+            {
+              path: '/interview',
+              component: './interview/Interview'
+            },
+            {
+              path: '/interview/seo',
+              name: 'REACTSEO',
+              hideInMenu:true,
+              component: './interview/Seo'
+            }
+          ]
         },
         {
           path: '/about',
