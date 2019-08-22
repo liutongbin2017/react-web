@@ -9,7 +9,7 @@ import {
 } from 'antd';
 import Link from 'umi/link';
 import styles from '../welcome.less';
-
+import lunxun from '../../assets/lunxun.png'
 export default class Interview extends PureComponent {
 
   state = {
@@ -17,7 +17,6 @@ export default class Interview extends PureComponent {
   }
 
   onChange = page => {
-    console.log(111)
     this.setState({
       current: page
     })
@@ -279,6 +278,247 @@ export default class Interview extends PureComponent {
                       3、npm 5.0之后npm做了改动增加了package-lock.json<br />
                       4、离线模式，当已经安装了一个软件包，用yarn再次安装时直接从缓存中获取，速度更快，npm需要在线下载
                     </p>
+                  </div>
+                </Card.Grid>
+              </Card>
+            </Col>
+          }
+          {
+            this.state.current === 3 &&
+            <Col span={17}>
+              <Card title="string字符串'abc'如何转换成'cba'" style={cartStyle}>
+                <Card.Grid style={gridStyle} className={styles.interviewStyle}>
+                  <div>
+                    <p>'message = 'RUNOOB''</p>
+                    <p>'message.split()' ------>'["R","U","N","O","O","B"]'</p>
+                    <p>'message.split('').reverse()' ------>'["B","O","O","N","U","R"]'</p>
+                    <p>'message.split('').reverse().join('')' ------>BOONUR</p>
+                  </div>
+                </Card.Grid>
+              </Card>
+              <Card title="npm和yarn的区别" style={cartStyle}>
+                <Card.Grid style={gridStyle} className={styles.interviewStyle}>
+                  <div>
+                    <p>1、npm install的时候是按顺序依次下载包，yarn是并行下载</p>
+                    <p>2、yarn的命令比npm简单</p>
+                    <p>3、npm 5.0之后做了改动，增加了package-lock.json</p>
+                    <p>4、离线模式，当已经安装了一个软件包，用yarn再次安装时直接从缓存中获取，速度更快，npm需要在线下载</p>
+                  </div>
+                </Card.Grid>
+              </Card>
+              <Card title="less和sass的区别" style={cartStyle}>
+                <Card.Grid style={gridStyle} className={styles.interviewStyle}>
+                  <div>
+                    <p>1、less是基于javaScript，是在客户端处理的；sass是基于Ruby的，是在服务器处理的</p>
+                    <p>2、less声明变量是@，sass声明变量是$</p>
+                    <p>3、运算：less的运算符可带单位可不带单位，sass的运算符带单位的话会将单位也进行运算</p>
+                    <p>4、离线模式，当已经安装了一个软件包，用yarn再次安装时直接从缓存中获取，速度更快，npm需要在线下载</p>
+                  </div>
+                </Card.Grid>
+              </Card>
+              <Card title="git在同一分支开发的时候，如何查看修改" style={cartStyle}>
+                <Card.Grid style={gridStyle} className={styles.interviewStyle}>
+                  <div>
+                    <p>1、git status查看冲突文件</p>
+                    <p>2、git add或者git rm将解决后的文件暂存</p>
+                    <p>3、所有冲突解决后，git commit提交更改</p>
+                    <p>4、git diff查看两者文件的区别</p>
+                  </div>
+                </Card.Grid>
+              </Card>
+              <Card title="css伪类元素" style={cartStyle}>
+                <Card.Grid style={gridStyle} className={styles.interviewStyle}>
+                  <div>
+                    <p>link-visited-hover-active:顺序不能变</p>
+                    <p>:first-child伪类，选择器匹配属于任意元素的第一个子元素的元素</p>
+                    <p>:before 在每个元素之前插入内容</p>
+                    <p>:after 在每个元素之后插入内容</p>
+                    <p>:lang 为元素的lang属性选择一个开始值</p>
+                  </div>
+                </Card.Grid>
+              </Card>
+              <Card title="js的一些数据的api" style={cartStyle}>
+                <Card.Grid style={gridStyle} className={styles.interviewStyle}>
+                  <div>
+                    <p>Manth.round(4.7) ------>5：可以四舍五入</p>
+                    <p>Manth.random() ------> ：可以生成0-1之间的随机数</p>
+                    <p>toFixed() ------> ：将Number四舍五入为指定小数位数的数字</p>
+                  </div>
+                </Card.Grid>
+              </Card>
+              <Card title="线程与进程的区别" style={cartStyle}>
+                <Card.Grid style={gridStyle} className={styles.interviewStyle}>
+                  <div>
+                    <p>1、一个程序至有一个进程，一个进程至少有一个线程</p>
+                    <p>2、线程的划分尺度小于进程，使得多线程程序的并发性高</p>
+                    <p>3、进程在执行过程总拥有独立的内存单元，而多个线程共享内存，从而极大的提高了程序的运行效率</p>
+                    <p>4、线程在执行过程中与进程还是有区别的，每个单独的线程有一个程序运行的入口，顺序执行序列的出口，但是线程不能独立执行，必须依存在应用程序中，由应用程序提供多个线程执行控制</p>
+                  </div>
+                </Card.Grid>
+              </Card>
+              <Card title="减少页面加载时间的方法" style={cartStyle}>
+                <Card.Grid style={gridStyle} className={styles.interviewStyle}>
+                  <div>
+                    <p>1、将图片进行压缩</p>
+                    <p>2、优化css代码，压缩合并css</p>
+                    <p>3、网址后加斜杠(www.baidu.com/)</p>
+                    <p>4、减少http请求数量</p>
+                  </div>
+                </Card.Grid>
+              </Card>
+              <Card title="json与jsonp" style={cartStyle}>
+                <Card.Grid style={gridStyle} className={styles.interviewStyle}>
+                  <div>
+                    <p>json是一种轻量级的数据交换格式，是基于javaScript的一个子集，易于读写，占用宽带小</p>
+                    <p>jsonp主要是用来解决跨域问题，并且只支持get请求</p>
+                    <p>跨域问题的其他解决方式(document.domain+iframe、window.name、window.postMessage、服务器上设置代理页面)</p>
+                  </div>
+                </Card.Grid>
+              </Card>
+              <Card title="get与post区别" style={cartStyle}>
+                <Card.Grid style={gridStyle} className={styles.interviewStyle}>
+                  <div>
+                    <p>GET：一般用于信息获取，使用URL传递参数，对所发送信息的数量有限制，一般在2000个字符</p>
+                    <p>POST：一般用于修改服务器上的资源，对所发送的信息没限制</p>
+                    <p>get是通过地址栏传值，post是通过表单提交传值</p>
+                  </div>
+                </Card.Grid>
+              </Card>
+            </Col>
+          }
+          {
+            this.state.current === 4 &&
+            <Col span={17}>
+              <Card title="页面加载过程" style={cartStyle}>
+                <Card.Grid style={gridStyle} className={styles.interviewStyle}>
+                  <div>
+                    <p>1、当发送url请求时，浏览器会开启一个线程来处理这个请求，同时在远程DNS服务器上启动一个DNS查询，这能使浏览器获得请求对应的IP地址</p>
+                    <p>2、浏览器与远程服务器通过TCP三次握手建立TCP/IP连接</p>
+                    <p>3、一旦TCP/IP连接建立，浏览器会通过该连接向远程服务器发送http请求，远程服务器找到资源并使用http响应返回该资源</p>
+                    <p>4、客户端开始下载资源，浏览器解析HTML生成DOM Tree，加载css</p>
+                  </div>
+                </Card.Grid>
+              </Card>
+              <Card title="css sprites" style={cartStyle}>
+                <Card.Grid style={gridStyle} className={styles.interviewStyle}>
+                  <div>
+                    <p>css sprites是把网页中一些背景图整合到一张图片文件中，再利用css的"background-img"，"background-position"的组合进行背景定位，这样可以减少很多图片请求的开销</p>
+                  </div>
+                </Card.Grid>
+              </Card>
+              <Card title="数组的一些常用api" style={cartStyle}>
+                <Card.Grid style={gridStyle} className={styles.interviewStyle}>
+                  <div>
+                    <p>toString('数组变成字符串')；join('自定义分隔符')；concat('数组拼接')；<br />
+                      slice(start，end)('数组截取')；splice(start,n)(删除从start位置开始的n个元素)；reverse('倒叙')；<br />
+                      sort()('升序排序')；push('插入到最后')；unshift('插入到数组头部')
+                    </p>
+                  </div>
+                </Card.Grid>
+              </Card>
+              <Card title="call、apply、bind区别" style={cartStyle}>
+                <Card.Grid style={gridStyle} className={styles.interviewStyle}>
+                  <div>
+                    <p>1、call与apply是对函数的直接调用，bind方法返回的仍然是函数，后面要用括号来进行调用：call( xh ),apply( xh ),bind( xh )()</p>
+                    <p>2、call与apply区别：apply的第二个参数必须是数组：xw.say.call（xh，“实验小学”，“六年级”）；xw.say.apply（xh，[“实验小学”，“六年级”]）；
+                      xw.say.bind(xh,"实验小学","六年级")()或者 xw.say.bind(xh)("实验小学","六年级");
+                    </p>
+                  </div>
+                </Card.Grid>
+              </Card>
+              <Card title="forEach与map的区别" style={cartStyle}>
+                <Card.Grid style={gridStyle} className={styles.interviewStyle}>
+                  <div>
+                    <p>forEach遍历的数组没有返回值，map有返回值</p>
+                  </div>
+                </Card.Grid>
+              </Card>
+              <Card title="html5的一些新特性" style={cartStyle}>
+                <Card.Grid style={gridStyle} className={styles.interviewStyle}>
+                  <div>
+                    <p>增加了关于图像、位置、存储、多任务等功能</p>
+                    <p>拖拽释放：Drag、drop</p>
+                    <p>新的标签：header、nav、footer、aside、section</p>
+                    <p>音频、视频API：audio、video</p>
+                    <p>画布：canvas</p>
+                  </div>
+                </Card.Grid>
+              </Card>
+              <Card title="react的生命周" style={cartStyle}>
+                <Card.Grid style={gridStyle} className={styles.interviewStyle}>
+                  <div>
+                    <p>挂载：componentDidMount，卸载：componentWillUnMount</p>
+                    <p>判断组件是否持续更新：shouldComponentUpdate</p>
+                    <p>props变化监听：componentWillReceiveProps</p>
+                    <p>组件更新后调用，可作为更新后调用DOM的地方：componentDidUpdate(prevProps，prevState)</p>
+                  </div>
+                </Card.Grid>
+              </Card>
+              <Card title="webpack与gulp" style={cartStyle}>
+                <Card.Grid style={gridStyle} className={styles.interviewStyle}>
+                  <div>
+                    <p>gulp：是通过task对整个开发过程进行构建</p>
+                    <p>webpack：将许多松散的模块按照依赖和规则打包成符合生产部署的的前端资源</p>
+                  </div>
+                </Card.Grid>
+              </Card>
+              <Card title="箭头函数与普通函数的区别" style={cartStyle}>
+                <Card.Grid style={gridStyle} className={styles.interviewStyle}>
+                  <div>
+                    <p>箭头函数不绑定this，会捕获上下文的this值作为自己的this；普通函数的this指向调用它的那个对象</p>
+                    <p>箭头函数没有原型链( propotype ),普通函数有原型链</p>
+                  </div>
+                </Card.Grid>
+              </Card>
+              <Card title="ES6对象的解构赋值" style={cartStyle}>
+                <Card.Grid style={gridStyle} className={styles.interviewStyle}>
+                  <div>
+                    <p>数组的解构赋值：let [x,y] = [1,2]</p>
+                  </div>
+                </Card.Grid>
+              </Card>
+            </Col>
+          }
+          {
+            this.state.current === 5 &&
+            <Col span={17}>
+              <Card title="let、var、const区别" style={cartStyle}>
+                <Card.Grid style={gridStyle} className={styles.interviewStyle}>
+                  <div>
+                    <p>var声明的变量会挂载在windows上</p>
+                    <p>var声明变量存在变量提升，其他两个不存在</p>
+                    <p>同一个作用域下let和const不能声明同名变量，var可以</p>
+                    <p>const定义的对象里面的值可以修改</p>
+                  </div>
+                </Card.Grid>
+              </Card>
+              <Card title="HOC高阶组件" style={cartStyle}>
+                <Card.Grid style={gridStyle} className={styles.interviewStyle}>
+                  <div>
+                    <p>高阶组件是参数为组件，返回值为新组件的函数</p>
+                  </div>
+                </Card.Grid>
+              </Card>
+              <Card title="盒子模型" style={cartStyle}>
+                <Card.Grid style={gridStyle} className={styles.interviewStyle}>
+                  <div>
+                    <p>w3c盒子模型(标准盒子模型)：width指的是content的宽度</p>
+                    <p>IE盒子模型(怪异盒子模型)：width指的是content + padding + border</p>
+                  </div>
+                </Card.Grid>
+              </Card>
+              <Card title="js两种数据类型" style={cartStyle}>
+                <Card.Grid style={gridStyle} className={styles.interviewStyle}>
+                  <div>
+                    <p>基本数据类型：数字、字符串</p>
+                    <p>引用数据类型：数组、对象</p>
+                  </div>
+                </Card.Grid>
+              </Card>
+              <Card title="js的异步轮询机制" style={cartStyle}>
+                <Card.Grid style={gridStyle} className={styles.interviewStyle}>
+                  <div>
+                    <a target="_blank" href="https://www.cnblogs.com/heshan1992/p/6650593.html"><img src={lunxun} style={{ width:'100%' }}/></a>
                   </div>
                 </Card.Grid>
               </Card>

@@ -96,9 +96,6 @@ export default class Seo extends PureComponent {
               </div>
 
             </Card>
-            <Card id="props">
-              111
-            </Card>
           </Col>
         </Row>
       </PageHeaderWrapper>
