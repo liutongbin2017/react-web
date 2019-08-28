@@ -65,7 +65,8 @@ export default class Interview extends PureComponent {
                 <Card.Grid style={gridStyle} className={styles.interviewStyle}>
                   <div>
                     <a target="_blank" href="https://baijiahao.baidu.com/s?id=1622712837313298881&wfr=spider&for=pc">
-                      闭包就是能够读取其他函数内部变量的函数。例如在javaScript中，只有函数内部的子函数才能读取局部变量，所以闭包可以理解成"定义在一个函数内部的函数"。在本质上，闭包是将函数内部和函数外部链接起来的桥梁。
+                      闭包就是能够读取其他函数内部变量的函数。例如在javaScript中，只有函数内部的子函数才能读取局部变量，所以闭包可以理解成"定义在一个函数内部的函数"。
+                      在本质上，闭包是将函数内部和函数外部链接起来的桥梁。
                     </a>
                   </div>
                 </Card.Grid>
@@ -85,7 +86,8 @@ export default class Interview extends PureComponent {
               <Card title="git的rebase的使用" style={cartStyle}>
                 <Card.Grid style={gridStyle} className={styles.interviewStyle}>
                   <div>
-                    <a target="_blank" href="https://www.liaoxuefeng.com/wiki/896043488029600/1216289527823648">把分叉的提交历史“整理”成一条直线，看上去更直观。缺点是本地的分叉提交已经被修改过了。主要是用来解决很冰多个本地分支</a>
+                    <a target="_blank" href="https://www.liaoxuefeng.com/wiki/896043488029600/1216289527823648">把分叉的提交历史“整理”成一条直线，看上去更直观。
+                      缺点是本地的分叉提交已经被修改过了。主要是用来解决很多个本地分支</a>
                   </div>
                 </Card.Grid>
               </Card>
@@ -312,7 +314,6 @@ export default class Interview extends PureComponent {
                     <p>1、less是基于javaScript，是在客户端处理的；sass是基于Ruby的，是在服务器处理的</p>
                     <p>2、less声明变量是@，sass声明变量是$</p>
                     <p>3、运算：less的运算符可带单位可不带单位，sass的运算符带单位的话会将单位也进行运算</p>
-                    <p>4、离线模式，当已经安装了一个软件包，用yarn再次安装时直接从缓存中获取，速度更快，npm需要在线下载</p>
                   </div>
                 </Card.Grid>
               </Card>
@@ -349,7 +350,7 @@ export default class Interview extends PureComponent {
               <Card title="线程与进程的区别" style={cartStyle}>
                 <Card.Grid style={gridStyle} className={styles.interviewStyle}>
                   <div>
-                    <p>1、一个程序至有一个进程，一个进程至少有一个线程</p>
+                    <p>1、一个程序至少有一个进程，一个进程至少有一个线程</p>
                     <p>2、线程的划分尺度小于进程，使得多线程程序的并发性高</p>
                     <p>3、进程在执行过程总拥有独立的内存单元，而多个线程共享内存，从而极大的提高了程序的运行效率</p>
                     <p>4、线程在执行过程中与进程还是有区别的，每个单独的线程有一个程序运行的入口，顺序执行序列的出口，但是线程不能独立执行，必须依存在应用程序中，由应用程序提供多个线程执行控制</p>

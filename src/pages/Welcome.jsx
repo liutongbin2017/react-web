@@ -28,15 +28,15 @@ export default class Welcome extends PureComponent{
 
     return (
       <PageHeaderWrapper>
-        <p
-          style={{
-            textAlign: 'center',
-            fontSize: '20px',
-            fontStyle: 'oblique',
-          }}
-        >
-          一个人只有一个心脏，却有两个心房。一个住着快乐，一个住着悲伤，不要笑得太大声，不然会吵醒旁边的悲伤。---佛说
-        </p>
+        {/*<p*/}
+          {/*style={{*/}
+            {/*textAlign: 'center',*/}
+            {/*fontSize: '20px',*/}
+            {/*fontStyle: 'oblique',*/}
+          {/*}}*/}
+        {/*>*/}
+          {/*一个人只有一个心脏，却有两个心房。一个住着快乐，一个住着悲伤，不要笑得太大声，不然会吵醒旁边的悲伤。---佛说*/}
+        {/*</p>*/}
         <Row gutter={16}>
           <Col span={17}>
             <Card title="前端知识汇总" extra={<span className={styles.subtitle}>FrontEnd knowledge aggregation</span>} style={cartStyle}>
