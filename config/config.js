@@ -113,7 +113,19 @@ export default {
               name: 'REACTSEO',
               hideInMenu:true,
               component: './interview/Seo'
-            }
+            },
+            {
+              path: '/interview/flex',
+              name: 'flex',
+              hideInMenu:true,
+              component: './interview/Flex'
+            },
+            {
+              path: '/interview/httpRequest',
+              name: 'HTTPREQUEST',
+              hideInMenu:true,
+              component: './interview/HttpRequest'
+            },
           ]
         },
         {

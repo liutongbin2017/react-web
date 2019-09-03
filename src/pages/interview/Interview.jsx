@@ -10,6 +10,8 @@ import {
 import Link from 'umi/link';
 import styles from '../welcome.less';
 import lunxun from '../../assets/lunxun.png'
+import copy from '../../assets/copy.png'
+import clearfloat from '../../assets/clearfloat.png'
 export default class Interview extends PureComponent {
 
   state = {
@@ -523,6 +525,90 @@ export default class Interview extends PureComponent {
                   </div>
                 </Card.Grid>
               </Card>
+              <Card title="http状态码" style={cartStyle}>
+                <Card.Grid style={gridStyle} className={styles.interviewStyle}>
+                  <Link to={'./interview/httpRequest'} className={styles.contentStyle}>http请求主要总结了五大类</Link>
+                </Card.Grid>
+              </Card>
+              <Card title="块级元素的一些操作" style={cartStyle}>
+                <Card.Grid style={gridStyle} className={styles.interviewStyle}>
+                  <p>如何将三个div放在同一行，让两边的div分别固定在左右两侧，中间的要自适应</p>
+                  <p>1、左右两个div要左右浮动，设置左右宽度分别为100px</p>
+                  <p>2、中间的div设置inline-block，margin设置上下为0，左右为100</p>
+                </Card.Grid>
+              </Card>
+              <Card title="行内元素和块级元素有哪些" style={cartStyle}>
+                <Card.Grid style={gridStyle} className={styles.interviewStyle}>
+                  <p>行内元素：a，label，img，input，select，span，b</p>
+                  <p>块级元素、div，dd，dl，dt，h标签，ul，li，table系列，</p>
+                  <p>
+                    行内元素与块级元素的区别：块级元素会独占一行，其宽度自动填满其父元素宽度，块级元素可以设置width、height；
+                    行内元素不会独占一行，相邻的行内元素会排列在同一行里，直到一行排不下去才会换行，设置width、height无效
+                  </p>
+                </Card.Grid>
+              </Card>
+              <Card title="select、radio如何用js进行选中" style={cartStyle}>
+                <Card.Grid style={gridStyle} className={styles.interviewStyle}>
+                  <p>select需要用到prop属性，来进行选中</p>
+                  <p>radio以及他的可以采用attr来进行赋值属性选中</p>
+                </Card.Grid>
+              </Card>
+              <Card title="内存泄漏以及如何避免" style={cartStyle}>
+                <Card.Grid style={gridStyle} className={styles.interviewStyle}>
+                  <p>常见的js泄漏 <br />
+                    1、意外的全局变量 <br />
+                    2、被遗忘的计时器或者回调 <br />
+                    3、超出DOM引用<br />
+                    4、闭包
+                  </p>
+                  <p>
+                    <a target="_blank" href="https://blog.csdn.net/qappleh/article/details/80337630">查看详细注解》》</a>
+                  </p>
+                </Card.Grid>
+              </Card>
+            </Col>
+          }
+          {
+            this.state.current === 6 &&
+            <Col span={17}>
+              <Card title="append与appendTo的区别" style={cartStyle}>
+                <Card.Grid style={gridStyle} className={styles.interviewStyle}>
+                  <div>
+                    <p>append：向指定的元素中追加内容，被追加的content参数可以是字符、html元素标记，也可以是字符串(append(content))</p>
+                    <p>appendTo：$(content).appendTo(selector),content标示需要插入的内容，参数selector表示被选的元素，默认是在尾部</p>
+                    <p>
+                      <a target="_blank" href="https://blog.csdn.net/u014482758/article/details/40504205">查看详细注解》》</a>
+                    </p>
+                  </div>
+                </Card.Grid>
+              </Card>
+              <Card title="js克隆对象和数组的常用方法介绍" style={cartStyle}>
+                <Card.Grid style={gridStyle} className={styles.interviewStyle}>
+                  <div>
+                    <img src={copy} style={{ width: '100%' }} />
+                  </div>
+                </Card.Grid>
+              </Card>
+              <Card title="js实现给html标签赋值" style={cartStyle}>
+                <Card.Grid style={gridStyle} className={styles.interviewStyle}>
+                  <div>
+                    <p>1、$('input').val('给input标签赋值')：val()用于input元素的内容存取</p>
+                    <p>2、$('text').text('文本内容的存储')：text()用于html元素文本的存取</p>
+                    <p>3、$('html').html()：html()不但可以用于html元素文本内容的存取，还可以用于html内容的存取</p>
+                  </div>
+                </Card.Grid>
+              </Card>
+              <Card title="css清除浮动" style={cartStyle}>
+                <Card.Grid style={gridStyle} className={styles.interviewStyle}>
+                  <div>
+                    <p>伪类:after和zoom</p>
+                    <p>
+                      <img src={clearfloat} style={{ width: '100%' }} />
+                    </p>
+                  </div>
+                </Card.Grid>
+              </Card>
+
             </Col>
           }
 
@@ -531,7 +617,7 @@ export default class Interview extends PureComponent {
 
         </Row>
         <Row style={{ textAlign: 'center' }}>
-          <Pagination current={this.state.current} onChange={this.onChange} total={50}/>
+          <Pagination current={this.state.current} onChange={this.onChange} total={60}/>
         </Row>
       </PageHeaderWrapper>
     )

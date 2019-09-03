@@ -10,6 +10,11 @@ import {
 import Link from 'umi/link';
 import styles from '../welcome.less';
 import number from '../../assets/number.png'
+import dataName from '../../assets/dataName.png'
+import dayTime from '../../assets/dayTime.png'
+import hour from '../../assets/hour.png'
+import cookies from '../../assets/cookies.png'
+import key from '../../assets/key.png'
 
 export default class Language extends PureComponent {
 
@@ -45,6 +50,8 @@ export default class Language extends PureComponent {
 
 
 
+
+
     return (
       <PageHeaderWrapper>
         <Row gutter={16}>
@@ -68,6 +75,59 @@ export default class Language extends PureComponent {
               <Card title="数字" style={cartStyle}>
                 <Card.Grid style={gridStyle} className={styles.interviewStyle}>
                   <img src={number} style={{ width: '100%' }} />
+                </Card.Grid>
+              </Card>
+              <Card title="整数检测" style={cartStyle}>
+                <Card.Grid style={gridStyle} className={styles.interviewStyle}>
+                  <p>Number.isInteger(42) //true</p>
+                  <p>Number.isInteger(42.00) //true</p>
+                  <p>Number.isInteger(42.3) //false</p>
+                </Card.Grid>
+              </Card>
+              <Card title="显示解析数字字符串" style={cartStyle}>
+                <Card.Grid style={gridStyle} className={styles.interviewStyle}>
+                  <p>var a = "42"; var b = "42px";</p>
+                  <p>Number(a):42;parseInt(a):42</p>
+                  <p>Number(b):NaN;parseInt(b):42</p>
+                  <p>Number：解析数字只能是数字，多余的东西会直接返回值NAN</p>
+                  <p>parseInt：解析数字时允许出现非数字的字符</p>
+                </Card.Grid>
+              </Card>
+              <Card title="rem与em区别" style={cartStyle}>
+                <Card.Grid style={gridStyle} className={styles.interviewStyle}>
+                  <p>rem只受到浏览器字体的大小的影响</p>
+                  <p>em受到当下字体的大小的影响，当标签无字体大小的时候，em才继承浏览器的字体大小</p>
+                </Card.Grid>
+              </Card>
+              <Card title="字体下面加上水印的写法(针对h5)" style={cartStyle}>
+                <Card.Grid style={gridStyle} className={styles.interviewStyle}>
+                  <div>
+                    <img src={dataName} style={{width: '100%'}} />
+                  </div>
+                </Card.Grid>
+              </Card>
+              <Card title="时间的处理" style={cartStyle}>
+                <Card.Grid style={gridStyle} className={styles.interviewStyle}>
+                  <div>
+                    <img src={dayTime} style={{ width: '100%' }} />
+                  </div>
+                  <div>
+                    <img src={hour} style={{ width: '100%' }} />
+                  </div>
+                </Card.Grid>
+              </Card>
+              <Card title="从cookies获取token值" style={cartStyle}>
+                <Card.Grid style={gridStyle} className={styles.interviewStyle}>
+                  <div>
+                    <img src={cookies} style={{ width: '100%' }} />
+                  </div>
+                </Card.Grid>
+              </Card>
+              <Card title="电脑公钥的获取" style={cartStyle}>
+                <Card.Grid style={gridStyle} className={styles.interviewStyle}>
+                  <div>
+                    <img src={key} style={{ width: '100%' }} />
+                  </div>
                 </Card.Grid>
               </Card>
             </Col>

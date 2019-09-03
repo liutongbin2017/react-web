@@ -75,6 +75,14 @@ export default class Welcome extends PureComponent{
                 </a>
               </Card.Grid>
             </Card>
+            <Card title="FLEX布局" extra={<span className={styles.subtitle}>FLEX</span>} style={cartStyle}>
+              <Card.Grid style={gridStyle}>
+                <Link to={'./interview/flex'} className={styles.contentStyle}>Flex 是Flexible Box的缩写，意为"弹性布局"，用来为盒状模型提供最大的灵活性。任何一个容器都可以指定为Flex布局，行内元素也可以使用Flex布局</Link>
+                {/*<a target="_blank" className={styles.contentStyle} href="http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html?utm_source=tuicool">*/}
+                  {/**/}
+                {/*</a>*/}
+              </Card.Grid>
+            </Card>
           </Col>
           <Col span={4}>
             <Card title="目录" bordered={false} style={{ width: 300 }}>
